@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            background-color: #F9F9F9;
-            font-family: Arial, sans-serif;
-            color: #333333;
-        }
+        <style>
+            body {
+                background-color: #F9F9F9;
+                font-family: 'Arial', sans-serif;
+                color: #333333;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
 
-        .container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 20px;
-            padding: 20px;
-        }
+            h1, p {
+                max-width: 800px; /* Ajusta este valor según prefieras */
+            }
 
-        .img-box {
-            background-color: #fff;
-            padding: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
+            .container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 20px;
+                padding: 20px;
+                width: 80%; /* Ajusta al ancho deseado */
+                max-width: 1200px; /* Evita que la cuadrícula se vuelva demasiado ancha en pantallas grandes */
+            }
 
-        .img-box img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
+            .img-box {
+                background-color: #fff;
+                padding: 10px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
 
-        a, a:visited {
-            color: #E9A6A6;
-            text-decoration: none;
-        }
+            .img-box img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 8px; /* Añade bordes redondeados a las imágenes */
+            }
 
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+            a, a:visited {
+                color: #E9A6A6;
+                text-decoration: none;
+                font-weight: bold; /* Hace que el enlace sea más notorio */
+            }
 
-    <title>Mi Galería de Arte</title>
-</head>
+            a:hover {
+                text-decoration: underline;
+            }
+
+            @media (max-width: 768px) {
+                .container {
+                    grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas en pantallas más pequeñas */
+                }
+            }
+
+            @media (max-width: 480px) {
+                .container {
+                    grid-template-columns: 1fr; /* Una sola columna para pantallas muy pequeñas */
+                }
+            }
+        </style>
+
+        <title>Mi Galería de Arte</title>
+    </head>
 <body>
     <h1>Bienvenidos a mi Galería de Arte</h1>
     <p>Estas son algunas de mis obras:</p>
