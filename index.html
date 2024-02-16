@@ -6,11 +6,37 @@
 
     <style>
         body {
-            background-color: #f0f0f0;
+            background-color: #F9F9F9;
             font-family: Arial, sans-serif;
+            color: #333333;
         }
-        h1 {
-            color: #333;
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+        }
+
+        .img-box {
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .img-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a, a:visited {
+            color: #E9A6A6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 
@@ -19,10 +45,18 @@
 <body>
     <h1>Bienvenidos a mi Galería de Arte</h1>
     <p>Estas son algunas de mis obras:</p>
-    <img src="obra1.webp" alt="Descripción de la imagen">
-    <img src="obra2.webp" alt="Descripción de la imagen">
-    <img src="obra3.webp" alt="Descripción de la imagen">
+    <div class="container">
+        <div class="img-box">
+            <img src="obra1.webp" alt="Descripción de la imagen">
+        </div>
+        <div class="img-box">
+            <img src="obra2.webp" alt="Descripción de la imagen">
+        </div>
+        <div class="img-box">
+            <img src="obra3.webp" alt="Descripción de la imagen">
+        </div>
+        <!-- Repite los divs para más imágenes, asegurándote de que cada una esté dentro de un div con clase "img-box" -->
+    </div>
     <p>Para contactarme, por favor <a href="mailto:tu-email@example.com">envíame un email</a>.</p>
-
 </body>
 </html>
